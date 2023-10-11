@@ -1,2 +1,2 @@
 # WT-Project
-The work of gods
+The work of GODS
