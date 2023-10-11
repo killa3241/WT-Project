@@ -1,0 +1,26 @@
+.heading{
+    text-align: center;
+    background-color: #0f1111;
+}
+
+.heading h1{
+    display: inline-block;
+    color: white;
+}
+
+.heading img{
+    display: inline-block;
+    height: 70px;
+    float:right;
+}
+
+.navigation{
+    background-color: #09efef;
+    height:50px;
+}
+
+.navigation a{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    color: white;
+}
