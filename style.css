@@ -1,6 +1,10 @@
 body{
-    background-color: rgb(240, 240, 184);
-    margin:20px;
+    background-image: url(bgi.jpg);
+    background-repeat: no-repeat;    
+    background-position: center;  
+    background-attachment: fixed;
+    background-size:cover;   
+    margin:0px 5px 0px;
 }
 header h1{
     text-align: center;
@@ -19,17 +23,19 @@ header h1{
     background-color: darkcyan;
     padding:0px;
     margin:0px;
-    border-radius: 10px;    
+    border-radius: 10px;
+    margin-bottom: 10px;    
 }
 .navbar li{
     float: left;
     margin-left: 20px;
+    font-family: 'Young Serif';
 }
 .navbar li a{
     padding:3px 3px;
     color:white;
     text-decoration: none;
-    padding:15px;
+    padding:10px;
     display: block;
     text-align: center;
 }
@@ -37,16 +43,13 @@ header h1{
     color:blue;
 }
 .category{
-    margin:10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .subc{
-    width: 200px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    color:black;
-    border-radius: 20px;
+    margin:0px;
+}
+.subc img{
+    border-radius: 50px;
 }
