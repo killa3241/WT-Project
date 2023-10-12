@@ -1,26 +1,52 @@
-.heading{
+body{
+    background-color: rgb(240, 240, 184);
+    margin:20px;
+}
+header h1{
     text-align: center;
-    background-color: #0f1111;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    flex:1;
 }
-
-.heading h1{
-    display: inline-block;
-    color: white;
+.pagetitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
-.heading img{
-    display: inline-block;
-    height: 70px;
-    float:right;
+.navbar ul{
+    overflow: auto;
+    list-style-type:none;  
+    background-color: darkcyan;
+    padding:0px;
+    margin:0px;
+    border-radius: 10px;    
 }
-
-.navigation{
-    background-color: #09efef;
-    height:50px;
+.navbar li{
+    float: left;
+    margin-left: 20px;
 }
-
-.navigation a{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: xx-large;
-    color: white;
+.navbar li a{
+    padding:3px 3px;
+    color:white;
+    text-decoration: none;
+    padding:15px;
+    display: block;
+    text-align: center;
+}
+.fa-solid.fa-cart-shopping:hover{
+    color:blue;
+}
+.category{
+    margin:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.subc{
+    width: 200px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:black;
+    border-radius: 20px;
 }
