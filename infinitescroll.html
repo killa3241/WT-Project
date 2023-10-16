@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            /* flex flow is short hand for the following 2 */
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+
+            align-items: center;
+            justify-content: center;
+        }
+        .container>img{
+            /* 1 unit of flex, 21% min size (flex-basis) */
+            flex: 1 21%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main style="height: 1000px;">
+
+    </main>
+
+    <script>
+
+        window.onload = function(){
+
+            const images = [
+                'https://images.unsplash.com/photo-1553531384-cc64ac80f931?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
+                'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+                'https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80',
+                'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+                'https://images.unsplash.com/photo-1556703588-6eae2585e025?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1547106429-11e696f446d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1509909756405-be0199881695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+                'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80',
+            ]
+
+            const body = document.body;
+            const html = document.documentElement;
+
+            const main = document.querySelector('main');
+
+            function createContainer(){
+                const element = document.createElement('section');
+                element.setAttribute('class', 'container')
+                return element;
+            }
+
+            function createImageElement(img){
+                const imgEl = document.createElement('img');
+                imgEl.setAttribute('src', img);
+                imgEl.setAttribute('width', '200');
+                return imgEl;
+            }
+
+            function getRandomImage(){
+                return images[Math.floor( Math.random() * images.length)];
+            }
+
+            function createPictureRow(){
+                const section = createContainer();
+                // 4 images per row
+                for (let index = 0; index < 4; index++) {
+                    const img = getRandomImage();
+
+                    const imgEl = createImageElement(img);
+                    section.appendChild(imgEl);
+                }
+                return section;
+            }
+
+            // creating 5 rows of pictures
+            for (let index = 0; index < 5; index++) {
+                main.appendChild(createPictureRow());
+            }
+
+            const viewportHeight = html.clientHeight;
+            
+            window.addEventListener('scroll', function(event){
+
+                // on scroll
+                // check if scrolled position is greater or equal to pageHeight
+
+
+                const pageHeight = html.scrollHeight;
+
+                const scrolledY = window.scrollY;
+
+                // - 50 px at the end to make the scrolling smoother
+                const scrolledToEnd = (scrolledY + viewportHeight) >= pageHeight -50
+
+                // if yes append a picture group to the DOM
+                if(scrolledToEnd){
+                    main.appendChild(createPictureRow());
+                }
+
+            })
+
+        }
+
+
+    </script>
+</body>
+</html>
