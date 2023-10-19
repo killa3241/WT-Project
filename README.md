@@ -7,3 +7,5 @@ fun_delete=()=>{
           ReactDOM.unmountComponentAtNode(document.getElementById("root"))
         }
       } // To remove item from cart
+
+80 items 8 categories 1 horizontal row for each category
