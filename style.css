@@ -119,9 +119,21 @@ header h1{
 
 .shop{
     display: grid;
-    grid-template-columns: repeat(4,223px);
+    grid-template-columns: repeat(5,223px);
     gap:30px;
     justify-content: center;
+}
+
+@media(max-width:1000px){
+    .shop{
+        grid-template-columns: repeat(2,223px);
+    }
+}
+
+@media(max-width:500px){
+    .shop{
+        grid-template-columns: repeat(1,223px);
+    }
 }
 
 .item{
@@ -132,8 +144,8 @@ header h1{
 .details{
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    gap: 15px;
+    padding: 5px;
+    
 }
 
 .price-quantity{
@@ -145,6 +157,7 @@ header h1{
 .buttons{
     display: flex;
     flex-direction: row;
+    padding-top: 23px;
     gap:10px;
     font-size: 20px;
 }
