@@ -9,4 +9,5 @@ fun_delete=()=>{
       } // To remove item from cart
 
 80 items 8 categories 1 horizontal row for each category
+<br>
 ..........................................................................................
