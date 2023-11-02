@@ -1,159 +1,76 @@
-body{
-    background-color:white;
-}
-header h1{
+.App {
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight:bolder;
-    flex:1;
-}
-.pagetitle{
-    display: flex;
-    justify-content: space-between;
-    background-color: #212529;
-    color: white;
-}
-.cart{
-    position: relative;
-    padding:15px;
-    background-color: white;
-    border-radius: 250px;
-    color:#212529;
-    font-size: 40px;
-}
-.cartAmount{
-    position: absolute;
-    padding-top: 15px;
-    top: -15px;
-    right: 0;
-    font-size: 30px;
-    background-color: red;
-    color: white;
-    border-radius: 20px;
-}
-
-.navbar ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    overflow: hidden;
-    list-style-type:none;  
-    background-color: darkcyan;
-    padding:0px;
-    margin:0px;
-    margin-bottom: 30px; 
-       
-}
-
-.navbar li{
-    float: left;
-    margin-left: 20px;
-    font-family: 'Young Serif';
-}
-.navbar li a{
-    padding:3px 3px;
-    color:white;
-    text-decoration: none;
-    padding:10px;
-    display: block;
-    text-align: center;
-}
-.dropdown {
-    float: left;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
+    padding: 20px;
   }
   
-.dropdown {
-    font-size: 17px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 8px;
-    background-color:darkcyan;
-    font-family: 'Young Serif';
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: hsl(149, 71%, 42%);
-    min-width: 0px;
-    overflow: hidden; /* Add this line to prevent content overflow */
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: absolute;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
   
-.dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-.dropdown:hover .dropdown-content {
-    display: block;
-    text-align: relative;
-  }
-.fa-solid.fa-cart-shopping:hover{
-    color:blue;
-}
-.category{
+  .shop {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-.subc{
-    margin:0px;
-}
-.subc img{
-    border-radius: 50px;
-}
-
-.shop{
-    display: grid;
-    grid-template-columns: repeat(5,223px);
-    gap:30px;
-    justify-content: center;
-}
-
-@media(max-width:1000px){
-    .shop{
-        grid-template-columns: repeat(2,223px);
-    }
-}
-
-@media(max-width:500px){
-    .shop{
-        grid-template-columns: repeat(1,223px);
-    }
-}
-
-.item{
-    border: 2px solid black;
-    border-radius: 4px;
-    position: relative;
-}
-
-.details{
+    gap: 20px;
+  }
+  
+  .item {
+    width: 220px;
+    height:350px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: left;
+    float:left;   
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .details {
+    padding: 10px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  .price-quantity {
     display: flex;
-    flex-direction: column;
-    padding: 5px;
-    
-}
-
-.price-quantity{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-}
-
-.buttons{
-    display: flex;
-    flex-direction: row;
-    padding-top: 23px;
-    gap:10px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  h2 {
     font-size: 20px;
-}
+    font-weight: bold;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bi {
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 8px;
+    color: #007BFF; /* Blue color for the icons */
+  }
+  
+  .quantity {
+    font-size: 20px;
+  }
+  
