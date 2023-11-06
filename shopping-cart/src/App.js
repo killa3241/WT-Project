@@ -134,6 +134,7 @@ function App() {
     <div className="App">
       <div><h1>Shopping Cart</h1>
       <FaCartShopping id="carticon"/></div>
+      <Navbar />
       <Shop shopItemsData={shopItemsData} />
     </div>
   );
