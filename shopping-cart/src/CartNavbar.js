@@ -4,18 +4,21 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
         <div className="dropdown">
-          <li className="dropdown-btn">Sort By Item
-            <i className="fa fa-caret-down"></i>
-          </li>
-          <div className="dropdown-content">
-            <a href="#">Laptop</a>
-            <a href="#">Home appliances</a>
-            <a href="#">Children</a>
-          </div>
+        <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Laptop</a>
+      <a href="#">Television</a>
+      <a href="#">Home Appliances</a>
+      <a href="#">Mobile Phone</a>
+    </div>
+  </div>
         </div>
       </ul>
     </nav>
