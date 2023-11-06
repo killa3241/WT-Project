@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 import Shop from './shop';
+import {FaCartShopping} from "react-icons/fa6";
+
 
 function App() {
   const shopItemsData = [{
@@ -130,7 +132,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shopping Cart</h1>
+      <div><h1>Shopping Cart</h1>
+      <FaCartShopping id="carticon"/></div>
       <Shop shopItemsData={shopItemsData} />
     </div>
   );
