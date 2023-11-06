@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css'
-
+import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 const ShopItem = ({ item }) => {
   const { id, name, price, desc, img } = item;
   const [quantity, setQuantity] = useState(0);
@@ -24,9 +24,9 @@ const ShopItem = ({ item }) => {
         <div className="price-quantity">
           <h2>₹ {price}</h2>
           <div className="buttons">
-            <i className="bi bi-dash-square" onClick={decrement}></i>
+          <AiFillMinusCircle className="plusminusicons" onClick={decrement}/>  
             <div className="quantity">{quantity}</div>
-            <i className="bi bi-plus-square" onClick={increment}></i>
+            <AiFillPlusCircle className="plusminusicons" onClick={increment}/>                    
           </div>
         </div>
       </div>
