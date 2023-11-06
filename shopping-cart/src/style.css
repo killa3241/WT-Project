@@ -1,76 +1,81 @@
 .App {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .shop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .item {
-    width: 220px;
-    height:350px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: left;
-    float:left;   
-  }
-  
-  .item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .details {
-    padding: 10px;
-  }
-  
-  h3 {
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  p {
-    font-size: 14px;
-  }
-  
-  .price-quantity {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .buttons {
-    display: flex;
-    align-items: center;
-  }
-  
-  .bi {
-    font-size: 24px;
-    cursor: pointer;
-    margin: 0 8px;
-    color: #007BFF; /* Blue color for the icons */
-  }
-  
-  .quantity {
-    font-size: 20px;
-  }
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item {
+  width: 18%;
+  height:350px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+  float:left;
+  margin-right: 9px;
+  transition: transform 0.3s;   
+}
+.item:hover {
+  transform: scale(1.1);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.details {
+  padding: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+}
+
+.price-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.bi {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 8px;
+  color: #007BFF; /* Blue color for the icons */
+}
+
+.quantity {
+  font-size: 20px;
+}
   
