@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import Shop from './shop';
+import Navbar from './CartNavbar';
 import {FaCartShopping} from "react-icons/fa6";
 
 
