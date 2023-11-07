@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 import Shop from './shop';
 import {FaCartShopping} from "react-icons/fa6";
@@ -6,6 +6,7 @@ import Navbar from './CartNavbar';
 
 
 function App() {
+    const [cartCount, setCartCount] = useState(0);
   const shopItemsData = [{
     id:"lg",
     name:"LG 4K UHD TV ",
@@ -119,7 +120,7 @@ function App() {
       id:"msi",
       name:"MSI Crosshair 15",
       price:125990,
-      desc:"MIntel i7 12700H-3.5 GHz Max Boost 4.7 GHz, 16GB DDR4, 1TB NVMe SSD, Nvidia RTX 3070-8GB GDDR6, Backlit, Windows 11",
+      desc:"Intel i7 12700H-3.5 GHz Max Boost 4.7 GHz, 16GB DDR4, 1TB NVMe SSD, Nvidia RTX 3070-8GB GDDR6, Backlit, Windows 11",
       img:"./images/laptop/MSICrosshair15B12UGZ.jpg"
   },{
       id:"lenovolegion",
@@ -127,21 +128,82 @@ function App() {
       price:119990,
       desc:"AMD Ryzen 7 5800H 16 (40.64cm) QHD IPS 165Hz 500Nits Gaming Laptop (32GB/1TB SSD/Win 11/NVIDIA RTX 3070 8GB/Storm Grey/2.45Kg)",
       img:"./images/laptop/LenovoLegion5Pro.jpg"
+  },{
+      id:"lgairc",
+      name:"LG RS-H19VNXE",
+      price:46990,
+      desc:"Split AC, Super Convertible 5-in-1, Hot & Cold, with Anti Virus Protection",
+      img:"./images/homeappliances/air-conditioner.png"
+  },{  
+      id:"dishw",
+      name:"Neptune Bl",
+      price:49391,
+      desc:"Unique Spray Action, Hot Water Wash, Built-In Water Softener",
+      img:"./images/homeappliances/dishwasher.png"
+  },{  
+      id:"cfan",
+      name:"Havells Stealth Air",
+      price:6899,
+      desc:"1200mm BLDC motor and Remote Controlled Ceiling Fan Pearl White",      
+      img:"./images/homeappliances/ceilingfan.jpg"
+  },{   
+      id:"grinder",
+      name:"Butterfly Rhino",
+      price:3999,
+      desc:"Table Top Grinder 2L, (Grey) 150W, 230V, AC 50Hz",
+      img:"./images/homeappliances/grinder.jpg"
+  },{   
+      id:"steamiron",
+      name:"Philips GC1905",
+      price:1399,
+      desc:"1440-Watt Steam Iron with Spray",
+      img:"./images/homeappliances/steamiron.jpg"
+  },{   
+      id:"moven",
+      name:"Samsung SlimFry",
+      price:15850,
+      desc:"28L SlimFry™, Convection Microwave Oven, 28L",
+      img:"./images/homeappliances/microwave.png"
+  },{   
+      id:"mixergrinder",
+      name:"Prestige Endura",
+      price:6698,
+      desc:"1000W Mixer Grinder, 6 Jars (1500 ml, 1000 ml, 1500 ml, 450 ml) (Black, Silver)",
+      img:"./images/homeappliances/mixergrinder.jpg"
+  },{   
+      id:"crobot",
+      name:"Eufy by Anker",
+      price:8999,
+      desc:"Robot Vacuum Cleaner, Super-Thin",
+      img:"./images/homeappliances/crobot.jpg"
+  },{   
+      id:"mfridge",
+      name:"Haier 42L",
+      price:9990,
+      desc:"Direct-cool Refrigerator, 42 Litres, 5 Stars",
+      img:"./images/homeappliances/mfridge.jpg"
+  },{   
+      id:"swmaker",
+      name:"Morphy Richards Sandwich Maker",
+      price:3238,
+      desc:"3 IN 1 750 Watt Sandwich Maker With changable Plate/ Multi Grill",
+      img:"./images/homeappliances/swmaker.jpg"
   }
+    
 
   ];
-
   return (
     <div className="App">
       <div class='header'>
         <h1>Welcome to Your Shopping Cart</h1>
         <FaCartShopping className="carticon"/>
+        <span className="cart-count">0</span>
         </div>
     <Navbar/>
       <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
-      <Shop shopItemsData={shopItemsData} />
+      <Shop shopItemsData={shopItemsData}/>
     </div>
   );
 }
