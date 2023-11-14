@@ -5,8 +5,18 @@ import {FaCartShopping} from "react-icons/fa6";
 import Navbar from './CartNavbar';
 
 
+
 function App() {
     const [cartCount, setCartCount] = useState(0);
+    const incrementCart = () => {
+        setCartCount(cartCount + 1);
+      };
+    
+      const decrementCart = () => {
+        if (cartCount > 0) {
+          setCartCount(cartCount - 1);
+        }
+      };
   const shopItemsData = [{
     id:"lg",
     name:"LG 4K UHD TV ",
@@ -319,13 +329,13 @@ function App() {
       <div class='header'>
         <h1>Welcome to Your Shopping Cart</h1>
         <FaCartShopping className="carticon"/>
-        <span className="cart-count">0</span>
+        <span className="cart-count">{cartCount}</span>
         </div>
     <Navbar/>
       <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
-      <Shop shopItemsData={shopItemsData}/>
+      <Shop shopItemsData={shopItemsData} incrementCart={incrementCart} decrementCart={decrementCart}/>
     </div>
   );
 }
