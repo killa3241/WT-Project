@@ -16,23 +16,29 @@
   align-items: center;
   justify-content: space-between;
 }
-.carticon{
+.carticon {
   display: flex;
   align-items: center;
   position: relative;
   cursor: pointer;
-  font-size: 50px;
+  font-size: 50px; /* Increase the font size for the cart icon */
 }
+
 .cart-count {
   position: absolute;
-  top: 64px; /* Adjust the positioning as needed */
-  right: 30px; /* Adjust the positioning as needed */
-  background-color: white; /* Background color for the number */
-  color: #000000; /* Text color for the number */
-  border-radius: 50%; /* To make it a circle */
-  padding: 4px 8px; /* Adjust padding as needed */
-  font-size: 11px; /* Adjust font size as needed */
+  top: 60px;
+  right: 25px;
+  transform: translate(50%, -50%);
+  background-color: #ff5252; /* Background color for the number */
+  color: #ffffff; /* Text color for the number */
+  border-radius: 50px; /* To make it a circle */
+  padding: 8px 12px; /* Increase the padding for better visibility */
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: bold;
 }
+
+
+
 .navbar ul{
   display: flex;
   flex-direction: row;
