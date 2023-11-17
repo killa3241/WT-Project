@@ -1,7 +1,7 @@
 import React from 'react';
 import {AiFillCaretDown} from 'react-icons/ai'
 
-function Navbar() {
+function Navbar({ onSortChange }) {
   return (
     <nav className="navbar">
       <ul>
@@ -20,13 +20,23 @@ function Navbar() {
     <button class="dropbtn">Sort By
       <AiFillCaretDown className='drop-down-icon'/>
     </button>
-    <div class="dropdown-content">
-      <a href="#">Television</a>
-      <a href="#">Laptop</a>
-      <a href="#">Home Appiances</a>
-      <a href="#">Electronic Gadgets</a>
-      <a href="#">Gaming</a>
-    </div>
+    <div className="dropdown-content">
+            <a href="#" onClick={() => onSortChange("TV")}>
+              Television
+            </a>
+            <a href="#" onClick={() => onSortChange("Laptop")}>
+              Laptop
+            </a>
+            <a href="#" onClick={() => onSortChange("HomeApp")}>
+              Home Appliances
+            </a>
+            <a href="#" onClick={() => onSortChange("Electronics")}>
+              Electronic Gadgets
+            </a>
+            <a href="#" onClick={() => onSortChange("Console")}>
+              Gaming
+            </a>
+  </div>
   </div>
         
       </ul>
